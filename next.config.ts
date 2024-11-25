@@ -4,7 +4,12 @@ const nextConfig: NextConfig = {
     /* config options here */
     images: {
         dangerouslyAllowSVG: true,
-        domains: ["placehold.co"], // Add external image domains here
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "*",
+            },
+        ],
     },
 };
 
